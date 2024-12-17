@@ -1,0 +1,806 @@
+@media (max-width: 500px) {
+
+:root {
+    --Back-Ground: rgba(241, 238, 229, 1);
+    --Text-And-Icon: rgba(42, 54, 99, 1);
+    --Buttons: rgba(181, 159, 120, 1);
+    --Buttons-Text: rgba(250, 246, 227, 1);
+    --white: #fff;
+    --Gray: #8a8a8a;
+    --Border-Gray: rgba(203, 203, 203, 1);
+    --Red: #ff0000;
+    }
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--Back-Ground);
+  font-family: "Poppins", sans-serif;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Main Wrapper for Scrollable Content */
+.main-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+
+/* Navigation CSS */
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: var(--Back-Ground);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--Text-And-Icon);
+  font-size: 0.8rem;
+  opacity: 0.6;
+  font-weight: normal;
+  transition: opacity 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+.nav-item img {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 5px;
+}
+
+/* Active State When Icon is Clicked */
+.nav-item.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.logo-image {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Home Page Styles */
+
+.home-page {
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.welcome-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Text-And-Icon);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--Text-And-Icon);
+}
+
+.wardrobe-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--Text-And-Icon);
+  margin: 0;
+ 
+}
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.see-all-btn {
+  color: var(--Text-And-Icon);
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 18px;
+  border: none;
+  background: none;
+}
+
+.action-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 17px;
+  border-radius: 10px;
+  background-color: var(--Buttons);
+}
+
+.action-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-color: transparent;
+  fill: var(--Buttons-Text);
+}
+
+.action-card h3 {
+  font-size: 18px;
+  color: var(--Buttons-Text);
+  background-color: transparent;
+  margin: 0;
+}
+
+/* Wardrobe Item Card */
+.wardrobe-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 152px;
+  height: 187px;
+}
+
+.item-image-container {
+  width: 100%;
+  height: 120px;
+  border: 1px solid var(--Border-Gray);
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Card-Background);
+}
+
+.item-image {
+  width: 152px;
+  height: 137px;
+  object-fit: cover;
+}
+
+.item-details {
+  text-align: left;
+  width: 100%;
+}
+
+.item-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Text-And-Icon);
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.item-tags {
+  font-size: 12px;
+  color: var(--Text-And-Icon);
+  margin: 0;
+}
+
+
+
+
+
+/* Wardrobe Page Styles */
+.wardrobe-page {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: var(--Back-Ground);
+}
+
+/* Header Styling */
+.wardrobe-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Title Section */
+.header-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item-count {
+  font-size: 12px;
+  color: var(--Text-And-Icon);
+  margin-bottom: 4px;
+}
+
+.wardrobe-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Text-And-Icon);
+  margin: 0;
+}
+
+.title-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-circle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+
+.add-circle-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Wardrobe Container and Categories */
+.wardrobe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wardrobe-category {
+  border-radius: 8px;
+}
+
+.category-header {
+  margin-bottom: 10px;
+}
+
+.category-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Text-And-Icon);
+}
+
+/* Carousel Styles */
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  padding-left: 1px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel>* {
+  flex-shrink: 0;
+  width: 152px;
+}
+
+.add-item-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 125px;
+}
+
+.add-item-slot img {
+  width: 142px;
+  height: 136px;
+  object-fit: contain;
+}
+
+
+
+/* Add and Edit Page Layout Styles */
+.form-page {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: var(--Back-Ground);
+}
+
+span {
+  color: var(--Gray);
+  background-color: transparent;
+}
+
+.form-page h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Text-And-Icon);
+  text-align: left;
+}
+
+.subtitle-text {
+  font-size: 14px;
+  color: var(--Text-And-Icon);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-page label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Text-And-Icon);
+  margin-bottom: 5px;
+}
+
+.form-page input,
+.form-page select {
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid var(--Border-Gray);
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--Text-And-Icon);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-page input::placeholder {
+  color: var(--Gray);
+}
+
+.form-page select {
+  max-width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Image Preview Box */
+.image-preview {
+  width: 100%;
+  height: 150px;
+  background-color: var(--white);
+  border: 1px solid var(--Border-Gray);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Button Styling */
+.form-page button {
+  width: 100%;
+  padding: 17px;
+  border-radius: 10px;
+  background-color: var(--Buttons);
+  color: var(--Buttons-Text);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+}
+
+/* Delete Button Edit Page */
+.delete-button {
+  width: 100%;
+  padding: 17px;
+  border-radius: 10px;
+  background-color: var(--Red) !important;
+  color: var(--white) !important;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  margin-top: 12px;
+}
+
+/* Outfit Preview Section */
+.outfit-preview {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid var(--Border-Gray);
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.outfit-preview h2  {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--Text-And-Icon);
+  background-color: transparent;
+}
+
+.outfit-preview p {
+  font-size: 12px;
+  color: var(--Gray);
+  background-color: transparent;
+  margin-bottom: 15px;
+}
+
+.preview-items {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  background-color: transparent;
+  scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.preview-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 5px;
+  border: 1px solid var(--Border-Gray);
+  border-radius: 8px;
+  background-color: transparent;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.preview-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.preview-card p {
+  font-size: 12px;
+  color: var(--Text-And-Icon);
+  background-color: transparent;
+  text-align: center;
+  margin: 0;
+}
+
+.wardrobe-item.selected {
+  border: 3px solid var(--Buttons);
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+/* Saved Outfits Page */
+
+/* Saved Outfits Container */
+.outfits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+/* Individual Outfit Card */
+.outfit-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid var(--Border-Gray);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Outfit Name */
+.outfit-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--Text-And-Icon);
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+/* Outfit Items Container */
+.outfit-items {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+  background-color: transparent;
+  scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Individual Item in Outfit */
+.outfit-item {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--Border-Gray);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Item Image */
+.outfit-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+/* Item Name */
+.outfit-item p {
+  font-size: 12px;
+  color: var(--Text-And-Icon);
+  margin: 0;
+  background-color: transparent;
+}
+
+/* Sustainability Tips Page Styles */
+.tips-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tip-card {
+  background-color: var(--white);
+  border: 1px solid var(--Border-Gray);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tip-card h2 {
+  font-size: 18px;
+  color: var(--Text-And-Icon);
+  font-weight: 600;
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+
+.tip-card p {
+  font-size: 14px;
+  color: var(--Gray);
+  background-color: transparent;
+}
+
+.points-reward {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--Buttons);
+  align-self: flex-start;
+}
+
+.category-filter {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.category-filter p {
+  font-size: 12px;
+  color: var(--Text-And-Icon);
+  margin: 10px 0;
+}
+
+.category-filter h3 {
+  color: var(--Text-And-Icon);
+}
+
+
+
+
+
+
+
+
+
+.profile-page {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--Back-Ground);
+  box-sizing: border-box;
+}
+
+/* Title */
+.profile-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Text-And-Icon);
+}
+
+/* Profile Card */
+.profile-card {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--white);
+  border: 1px solid var(--Border-Gray);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+  background-color: var(--Border-Gray);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+  color: var(--Text-And-Icon);
+}
+
+/* Stats Section Inside Profile Card */
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+  gap: 50px;
+}
+
+.profile-stats h3, p {
+  color: var(--Text-And-Icon);
+}
+
+.save-outfit-button {
+  margin-bottom: 20px;
+}
+
+/* Edit Profile Page */
+.form-page {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.image-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: var(--white);
+  border: 1px solid var(--Border-Gray);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--Text-And-Icon);
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--Border-Gray);
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--Text-And-Icon);
+  outline: none;
+}
+
+input:disabled {
+  background-color: var(--Back-Ground);
+  color: var(--Gray);
+}
+
+.save-outfit-button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--Buttons);
+  color: var(--Buttons-Text);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+}

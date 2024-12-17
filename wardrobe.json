@@ -1,0 +1,47 @@
+{
+  "users": {
+    "user1": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "wardrobe": {
+        "layers": [
+          { "id": 1, "name": "Coat", "tags": ["Casual", "Autumn"], "image": "/images/coat.png" },
+          { "id": 2, "name": "Blazer", "tags": ["Casual", "Party"], "image": "/images/blazer.png" },
+          { "id": 3, "name": "Sweater", "tags": ["Warm", "Cozy"], "image": "/images/sweater.png" }
+        ],
+        "shirts": [
+          { "id": 4, "name": "Cube Shirt", "tags": ["Casual"], "image": "/images/cube-shirt.png" },
+          { "id": 5, "name": "White T-Shirt", "tags": ["Casual"], "image": "/images/white-tshirt.png" },
+          { "id": 6, "name": "Black T-Shirt", "tags": ["Formal", "Casual"], "image": "/images/black-tshirt.png" }
+        ],
+        "pants": [
+          { "id": 7, "name": "Baggy Jeans", "tags": ["Casual"], "image": "/images/baggy-jeans.png" },
+          { "id": 8, "name": "Blazer Pants", "tags": ["Formal", "Party"], "image": "/images/blazer-pants.png" }
+        ],
+        "dresses": [],
+        "skirts": [],
+        "shoes": [
+          { "id": 9, "name": "Coat Shoes", "tags": ["Casual", "Autumn"], "image": "/images/coat-shoes.png" },
+          { "id": 10, "name": "Blazer Shoes", "tags": ["Formal", "Party"], "image": "/images/blazer-shoes.png" }
+        ],
+        "accessories": [
+          { "id": 11, "name": "Cap", "tags": ["Casual"], "image": "/images/cap.png" },
+          { "id": 12, "name": "Summer Glasses", "tags": ["Casual"], "image": "/images/summer-glasses.png" }
+        ]
+      }
+    },
+    "user2": {
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "wardrobe": {
+        "layers": [],
+        "shirts": [],
+        "pants": [],
+        "dresses": [],
+        "skirts": [],
+        "shoes": [],
+        "accessories": []
+      }
+    }
+  }
+}
