@@ -15,7 +15,7 @@ import AddItem from "./pages/AddItem";
 import EditItem from "./pages/EditItem";
 import SavedOutfits from "./pages/SavedOutfits";
 import EditOutfit from "./pages/EditOutfit";
-import EditProfile from "./pages/EditProfile"; // Import EditProfile Component
+import EditProfile from "./pages/EditProfile"; 
 import Navigation from "./components/Navigation";
 
 function App() {
