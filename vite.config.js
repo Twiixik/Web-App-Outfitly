@@ -4,11 +4,11 @@ import react from "@vitejs/plugin-react";
 export default defineConfig(({ command }) => {
   const config = {
     plugins: [react()],
-    base: "/",
+    base: "/", 
   };
 
   if (command !== "serve") {
-    config.base = "/YOUR_REPOSITORY_NAME/"; // Replace with your repo name
+    config.base = "/Web-App-Outfitly/"; 
   }
 
   return config;
