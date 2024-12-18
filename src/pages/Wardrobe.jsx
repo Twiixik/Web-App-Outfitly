@@ -3,7 +3,7 @@ import { ref, get } from "firebase/database";
 import { db } from "../firebaseConfig";
 import WardrobeItem from "../components/WardrobeItem";
 import { useNavigate } from "react-router-dom";
-import AddItemIcon from "../assets/AddItem.svg";
+import AddItemIcon from "../assets/icons/add-item.svg";
 import AddCircleIcon from "../assets/icons/add-circle.svg";
 import Logo from "../components/Logo";
 
