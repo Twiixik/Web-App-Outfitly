@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { db } from "../firebaseConfig";
 import WardrobeItem from "../components/WardrobeItem";
 import Logo from "../components/Logo";
-import AddIcon1 from "../assets/icons/add-icon.svg";
+import AddIcon1 from "../assets/icons/addicon.svg";
 
 const Home = ({ uid }) => {
   const [username, setUsername] = useState("User");
