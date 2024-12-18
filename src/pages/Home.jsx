@@ -3,8 +3,8 @@ import { ref, get } from "firebase/database";
 import { useNavigate } from "react-router-dom";
 import { db } from "../firebaseConfig";
 import WardrobeItem from "../components/WardrobeItem";
-import Logo from "../components/Logo"; // Reusable Logo component
-import AddIcon1 from "../assets/Icons/add-icon1.svg"; // New icon
+import Logo from "../components/Logo";
+import AddIcon1 from "../assets/icons/add-icon1.svg"; 
 
 const Home = ({ uid }) => {
   const [username, setUsername] = useState("User");

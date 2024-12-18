@@ -4,7 +4,7 @@ import { db } from "../firebaseConfig";
 import WardrobeItem from "../components/WardrobeItem";
 import { useNavigate } from "react-router-dom";
 import AddItemIcon from "../assets/AddItem.svg";
-import AddCircleIcon from "../assets/Icons/add-circle.svg";
+import AddCircleIcon from "../assets/icons/add-circle.svg";
 import Logo from "../components/Logo";
 
 const Wardrobe = ({ uid }) => {
